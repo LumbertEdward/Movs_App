@@ -14,6 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.movs.AllConstants.Constants;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -29,7 +31,6 @@ public class favouritesFragment extends Fragment {
     private NowShowingAdapter nowShowingAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private FavoritesNowInterface favoritesNowInterface;
-    private static final String api_key= "bfb9dfa7c6ccc29b4bdee1ec785dcb7c";
     private static final String language = "en-US";
 
     private ArrayList<NowPlaying> playingArrayList = new ArrayList<>();
@@ -53,7 +54,7 @@ public class favouritesFragment extends Fragment {
 
     private void getData() {
         favoritesNowInterface = FavoritesRetrofit.getRetrofit().create(FavoritesNowInterface.class);
-        Call<NowPlayingAll> nowPlayingAllCall = favoritesNowInterface.getNowShowingData(api_key, language);
+        Call<NowPlayingAll> nowPlayingAllCall = favoritesNowInterface.getNowShowingData(Constants.api_key, language);
         nowPlayingAllCall.enqueue(new Callback<NowPlayingAll>() {
             @Override
             public void onResponse(Call<NowPlayingAll> call, Response<NowPlayingAll> response) {

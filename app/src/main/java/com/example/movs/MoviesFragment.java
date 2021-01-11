@@ -19,14 +19,17 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.movs.AllConstants.Constants;
+
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static com.example.movs.AllConstants.Constants.api_key;
+
 public class MoviesFragment extends Fragment {
-    private static final String api_key= "bfb9dfa7c6ccc29b4bdee1ec785dcb7c";
     private static final String language = "en-US";
     private static final int TOTAL_PAGES = 1;
     private int START_PAGE = 1;

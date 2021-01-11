@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.movs.AllConstants.Constants;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayerView;
@@ -25,7 +26,6 @@ import com.google.android.youtube.player.YouTubeThumbnailView;
 import java.util.List;
 
 public class TrailerAdapter extends RecyclerView.Adapter<TrailerAdapter.MyViewHolder> {
-    private String key = "AIzaSyCEuBhYMutH-fNlaiJgWNH96NNDhjep8uk";
     private String url = "https://www.youtube.com/watch?v=";
     private YoutubeInterface youtubeInterface;
     private List<TrailersInfo> trailersInfoList;
@@ -54,7 +54,7 @@ public class TrailerAdapter extends RecyclerView.Adapter<TrailerAdapter.MyViewHo
                 youtubeInterface.getYouTubeVideo(trailersInfoList.get(position));
             }
         });
-        holder.youTubeThumbnailView.initialize(key, new YouTubeThumbnailView.OnInitializedListener() {
+        holder.youTubeThumbnailView.initialize(Constants.key, new YouTubeThumbnailView.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(YouTubeThumbnailView youTubeThumbnailView, YouTubeThumbnailLoader youTubeThumbnailLoader) {
                 youTubeThumbnailLoader.setVideo(trailersInfoList.get(position).getKey());

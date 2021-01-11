@@ -24,6 +24,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.movs.AllConstants.Constants;
 import com.like.LikeButton;
 import com.like.OnLikeListener;
 import com.squareup.picasso.OkHttp3Downloader;
@@ -39,7 +40,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class DetailsFragment extends Fragment {
-    private static final String api_key= "bfb9dfa7c6ccc29b4bdee1ec785dcb7c";
     private static final String language = "en-US";
     private ImageView img;
     private ImageView imgB;
@@ -193,7 +193,7 @@ public class DetailsFragment extends Fragment {
 
     private void getGenreData(){
         detailsGenresInterface = DetailsGenresRetrofit.getRetrofit().create(DetailsGenresInterface.class);
-        Call<GenresAll> genresAllCall = detailsGenresInterface.getGenres(api_key, language);
+        Call<GenresAll> genresAllCall = detailsGenresInterface.getGenres(Constants.api_key, language);
         genresAllCall.enqueue(new Callback<GenresAll>() {
             @Override
             public void onResponse(Call<GenresAll> call, Response<GenresAll> response) {

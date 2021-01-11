@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.movs.AllConstants.Constants;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -22,7 +23,6 @@ import com.google.android.youtube.player.YouTubePlayerSupportFragment;
 
 
 public class VideoDisplayFragment extends Fragment implements YouTubePlayer.OnInitializedListener{
-    private String key = "AIzaSyCEuBhYMutH-fNlaiJgWNH96NNDhjep8uk";
     private YouTubePlayerSupportFragment youTubePlayerSupportFragment;
     private TrailersInfo trailersInfo;
     private ImageView imageView;
@@ -45,7 +45,7 @@ public class VideoDisplayFragment extends Fragment implements YouTubePlayer.OnIn
         View v = inflater.inflate(R.layout.fragment_video_display, container, false);
         imageView = (ImageView) v.findViewById(R.id.imgVideoBack);
         youTubePlayerSupportFragment = new YouTubePlayerSupportFragment();
-        youTubePlayerSupportFragment.initialize(key, this);
+        youTubePlayerSupportFragment.initialize(Constants.key, this);
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_video, youTubePlayerSupportFragment);
