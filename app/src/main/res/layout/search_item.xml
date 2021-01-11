@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/linearSearch"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="horizontal"
+    android:background="@color/back"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/back"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        android:layout_marginLeft="5dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="fitXY"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:id="@+id/txtSearch"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:text="Angel has fallen"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/nunitobold"
+            android:textColor="@android:color/white"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

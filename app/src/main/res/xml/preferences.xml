@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Display">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="switch_preference_1"
+            android:title="Keep Screen On"
+            android:icon="@drawable/ic_devices_black_24dp"
+            android:summary="Stop screen from dimming"
+            />
+    </PreferenceCategory>
+</PreferenceScreen>

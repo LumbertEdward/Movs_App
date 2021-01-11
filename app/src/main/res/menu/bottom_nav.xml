@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/bottomMovies"
+        android:title="@string/bottom_mov"
+        android:icon="@drawable/ic_movie_black_24dp"
+        />
+    <item android:id="@+id/bottomUpcoming"
+        android:title="@string/bottom_upcoming"
+        android:icon="@drawable/ic_video_library_black_24dp"
+        />
+    <item android:id="@+id/bottomTrailers"
+        android:title="@string/bottom_mov_now"
+        android:icon="@drawable/ic_play_circle_outline_black_24dp"
+        />
+    <item android:id="@+id/bottomMe"
+        android:title="@string/bottom_mov_top"
+        android:icon="@drawable/ic_ondemand_video_black_24dp"
+        />
+
+
+</menu>
